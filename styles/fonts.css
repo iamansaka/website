@@ -8,6 +8,25 @@
   font-style: "normal";
 }
 
+/* Founders Grotesk Web */
+@font-face {
+  font-family: "Founders Grotesk Web";
+  src: url("../assets/fonts/FoundersGroteskWeb/founders-grotesk-web-regular.woff2");
+  src: url("../assets/fonts/FoundersGroteskWeb/founders-grotesk-web-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "Founders Grotesk Web";
+  src: url("../assets/fonts/FoundersGroteskWeb/founders-grotesk-web-light.woff2");
+  src: url("../assets/fonts/FoundersGroteskWeb/founders-grotesk-web-light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: "normal";
+}
+
 /* Morganite */
 @font-face {
   font-family: "Morganite";
@@ -18,52 +37,26 @@
 }
 
 /* Editorial */
-/* @font-face {
-    font-family: "Editorial New";
-    src: url("../assets/fonts/EditorialNew/EditorialNew-Ultralight.otf");
-    src: url("../assets/fonts/EditorialNew/EditorialNew-Ultralight.otf")
-      format("opentype");
-    font-weight: 200;
-    font-style: "normal";
-  }
-  
-  @font-face {
-    font-family: "Editorial New";
-    src: url("./../assets/fonts/EditorialNew/EditorialNew-Regular.otf");
-    src: url("./../assets/fonts/EditorialNew/EditorialNew-Regular.otf") format("opentype");
-    font-weight: 400;
-    font-style: "normal";
-  }
-  
-  @font-face {
-    font-family: "Editorial New";
-    src: url("./../assets/fonts/EditorialNew/EditorialNew-Ultrabold.otf");
-    src: url("./../assets/fonts/EditorialNew/EditorialNew-Ultrabold.otf") format("opentype");
-    font-weight: 800;
-    font-style: "normal";
-  } */
-
-/* Inter */
 @font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter/Inter-Regular.ttf");
-  src: url("../assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
+  font-family: "Editorial New";
+  src: url("../assets/fonts/EditorialNew/EditorialNew-Ultralight.otf");
+  src: url("../assets/fonts/EditorialNew/EditorialNew-Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: "normal";
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("./../assets/fonts/EditorialNew/EditorialNew-Regular.otf");
+  src: url("./../assets/fonts/EditorialNew/EditorialNew-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: "normal";
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter/Inter-Medium.ttf");
-  src: url("../assets/fonts/Inter/Inter-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: "normal";
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter/Inter-SemiBold.ttf");
-  src: url("../assets/fonts/Inter/Inter-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+  font-family: "Editorial New";
+  src: url("./../assets/fonts/EditorialNew/EditorialNew-Ultrabold.otf");
+  src: url("./../assets/fonts/EditorialNew/EditorialNew-Ultrabold.otf") format("opentype");
+  font-weight: 800;
   font-style: "normal";
 }

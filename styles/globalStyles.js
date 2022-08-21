@@ -1,6 +1,11 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
+import variables from "./Variables";
+import animation from "./Keyframes";
 
 const GlobalStyle = createGlobalStyle`
+
+    ${variables}
+    ${animation}
 
     *,
     *::before,
@@ -13,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html, body {
-        font-family: 'Inter', sans-serif;
+        font-family: "Founders Grotesk Web", sans-serif;
+        ${"" /* font-family: 'Inter', sans-serif; */}
         font-size: 15px;
         width: 100%;
     }
@@ -22,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
+
 `;
 
 export default GlobalStyle;
