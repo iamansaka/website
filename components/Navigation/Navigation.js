@@ -10,7 +10,7 @@ import { StyledNavigation, StyledNavigationList } from "../../styles/module/Navi
 
 export default function Navigation() {
   return (
-    <StyledNavigation aria-aria-label="navigation">
+    <StyledNavigation aria-label="navigation">
       <StyledNavigationList>
         {navLinks.map(({ name, url }, index) => (
           <Navigationitem url={url} key={index}>
