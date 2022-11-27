@@ -2,6 +2,7 @@ import React from "react";
 
 // Composant
 import Button from "../components/Button/Button";
+import DisplayedWorks from "../components/DisplayedWorks/DisplayedWorks";
 
 // Styled
 import StyledContainer from "../styles/base/Container.styled";
@@ -34,7 +35,7 @@ export default function index() {
           </RowStyled>
         </IntroBlockStyled>
       </HeroStyled>
-      <div>Hello</div>
+      <DisplayedWorks />
     </StyledContainer>
   );
 }
