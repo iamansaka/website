@@ -1,43 +1,58 @@
 import styled from "styled-components";
 
-export const StyledHeadingSection = styled.section`
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-  min-height: 100vh;
+export const HeroStyled = styled.section`
+  width: 100%;
+  height: calc(100vh - 195px);
+  margin-top: 6.25rem;
+  display: grid;
+  grid-template-columns: ${({ col }) => `repeat(${col || 1}, 1fr)`};
+  align-items: baseline;
+  grid-gap: 1.5rem;
+  grid-template-rows: 2fr 1fr;
+  width: 100%;
+
+  /* @media screen (max-width: 500px;) {
+  } */
 `;
 
-export const StyledHeadingTitle = styled.h1`
-  font-size: 10rem;
-  line-height: 1.2;
+export const HeadingTitleStyled = styled.h1`
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-start: span 12;
+  grid-column-end: span 12;
+  /* grid-row-start: span 1;
+  grid-row-end: span 1; */
+
+  font-family: "RightGrotesk", sans-serif;
+  font-size: 17vw;
+  /* font-size: 10rem; */
+  line-height: 0.7;
   text-transform: uppercase;
 
-  span {
-    display: block;
-    margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
 
-    &:first-child {
-      display: inline;
-      font-size: 1.667rem;
+  .home_span {
+    display: inline-block;
+
+    .is_and {
+      font-size: 1.563rem;
     }
   }
 `;
 
-export const StyledHeadingInfos = styled.p`
-  font-size: 1.333rem;
-  font-weight: 300;
-  line-height: 1.2;
-
-  max-width: 500px;
-  width: 100%;
-
-  margin-bottom: 2vw;
+export const IntroBlockStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.25em;
+  grid-column: 6 / span 4;
 `;
 
-export const StyledActions = styled.div`
+export const RowStyled = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-
-  margin-bottom: 2.667rem;
 `;

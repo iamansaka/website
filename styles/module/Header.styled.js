@@ -6,7 +6,8 @@ export const StyledHeader = styled.header`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 4.16vw;
+  padding-top: 2.16vw;
   padding-bottom: 1.5rem;
   padding-inline: 8.8541666667vw;
+  border-bottom: 1px solid var(--dark);
 `;
