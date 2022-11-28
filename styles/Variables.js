@@ -1,15 +1,15 @@
 import { css } from "styled-components";
 
 const Variables = css`
-    :root {
-        --blue: #148efb;
-        --dark: #161624;
-        --grey: #E8E8E2;
-        --white: #FFFFFF
+  :root {
+    --blue: #148efb;
+    --dark: #161624;
+    --grey: #e8e8e2;
+    --white: #ffffff;
 
-        --b-primary: #F5F5F5;
-        --b-secondary: #2B2B33;
-    }
+    --b-primary: #f5f5f5;
+    --b-secondary: #2b2b33;
+  }
 `;
 
 export default Variables;

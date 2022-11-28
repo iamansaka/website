@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeroStyled = styled.section`
   width: 100%;
-  height: calc(100vh - 195px);
+  height: calc(100vh - 190px);
   margin-top: 6.25rem;
   display: grid;
   grid-template-columns: ${({ col }) => `repeat(${col || 1}, 1fr)`};
@@ -20,8 +20,6 @@ export const HeadingTitleStyled = styled.h1`
   grid-template-rows: repeat(2, 1fr);
   grid-column-start: span 12;
   grid-column-end: span 12;
-  /* grid-row-start: span 1;
-  grid-row-end: span 1; */
 
   font-family: "RightGrotesk", sans-serif;
   font-size: 17vw;
@@ -55,4 +53,22 @@ export const RowStyled = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+
+  .home_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border: 1px solid var(--dark);
+    border-radius: 6.25rem;
+    vertical-align: middle;
+    gap: 8px;
+    padding: 0.6rem 1.125rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    &:hover {
+      color: var(--white);
+      background-color: var(--dark);
+    }
+  }
 `;
