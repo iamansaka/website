@@ -1,5 +1,6 @@
 // Librairie
-import React from "react";
+import React, { useState, useEffect } from "react";
+// import useScroll from "../Scroll/Scroll";
 
 // Styled
 import {
@@ -9,9 +10,30 @@ import {
 } from "../../styles/module/Tricker";
 
 function Tricker() {
+  // State
+  const [scrollPosition, setScrollPosition] = useState();
+
+  // Function
+  const onScrollHandler = () => {
+    if (window !== "undefined") {
+      setScrollPosition(window.pageYOffset);
+    }
+  };
+
+  // Hook
+  useEffect(() => {
+    window.addEventListener("scroll", onScrollHandler);
+    return () => {
+      window.removeEventListener("scroll", onScrollHandler);
+    };
+  }, []);
+
+  // Variable
+  let scrollY = scrollPosition;
+
   return (
     <TrickerStyled>
-      <TrickerListStyled>
+      <TrickerListStyled positionScroll={scrollY}>
         <TrickerItemStyled>Web designer</TrickerItemStyled>
         <TrickerItemStyled>Developpeur fullstack</TrickerItemStyled>
         <TrickerItemStyled>Back-End</TrickerItemStyled>

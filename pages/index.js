@@ -1,5 +1,5 @@
 // Librairies
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 // Composant
@@ -25,7 +25,7 @@ export default function index() {
             <span className="home_span">
               Designer <span className="is_and">&</span>
             </span>
-            <span className="home_span is_dev">Developer</span>
+            <span className="home_span is_dev">Developer.</span>
           </HeadingTitleStyled>
           <IntroBlockStyled>
             <p>
