@@ -36,7 +36,10 @@ export const HeadingTitleStyled = styled.h1`
     display: inline-block;
 
     .is_and {
-      font-size: 1.563rem;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+      border: 1px solid var(--dark);
+      border-radius: 50%;
     }
   }
 `;

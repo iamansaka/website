@@ -1,18 +1,22 @@
 import styled from "styled-components";
 
-export const SectionWorksStyled = styled.section`
-  background-color: var(--dark);
-  color: var(--white);
-  margin-bottom: 20rem;
+export const SectionWorksDisplay = styled.section`
+  margin-top: 100px;
+  margin-bottom: 150px;
 `;
 
-export const WorksheadStyled = styled.div`
-  padding-top: 2vh;
-  border-bottom: 1px solid var(--dark);
-  h2 {
-    font-family: "RightGrotesk", sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    text-transform: uppercase;
+export const TitleWorksStyled = styled.h2`
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "RightGrotesk", sans-serif;
+  font-size: 3.125rem;
+
+  &::before {
+    content: "01/";
+    display: inline-block;
+    letter-spacing: 3px;
+    font-size: calc(3.125rem / 2);
+    margin-right: 0.25rem;
+    opacity: 0.4;
   }
 `;

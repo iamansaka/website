@@ -23,7 +23,7 @@ export default function index() {
         <HeroStyled col={12}>
           <HeadingTitleStyled>
             <span className="home_span">
-              Designer <span className="is_and">&</span>
+              Designer <span className="is_and">and</span>
             </span>
             <span className="home_span is_dev">Developer.</span>
           </HeadingTitleStyled>
@@ -48,7 +48,7 @@ export default function index() {
           </IntroBlockStyled>
         </HeroStyled>
       </StyledContainer>
-      <Tricker />
+      {/* <Tricker /> */}
       <StyledContainer>
         <DisplayedWorks />
       </StyledContainer>

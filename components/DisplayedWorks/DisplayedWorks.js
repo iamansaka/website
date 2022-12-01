@@ -1,3 +1,4 @@
+// Librairie
 import React from "react";
 
 // Composant
@@ -5,21 +6,22 @@ import DisplayedWork from "./DisplayedWork/DisplayedWork";
 
 // Styled
 import {
-  SectionWorksStyled,
-  WorksheadStyled,
+  SectionWorksDisplay,
+  TitleWorksStyled,
 } from "../../styles/module/DisplayedWorks.styled";
 
 export default function DisplayedWorks() {
   return (
-    <SectionWorksStyled>
-      <WorksheadStyled>
-        <h2>Les derniers projets</h2>
-      </WorksheadStyled>
-      <div>
-        <DisplayedWork />
-        <DisplayedWork />
-        <DisplayedWork />
-      </div>
-    </SectionWorksStyled>
+    <SectionWorksDisplay>
+      <TitleWorksStyled>Découvrez mes derniers projets</TitleWorksStyled>
+      <ul className="work-items">
+        <li>
+          <DisplayedWork />
+        </li>
+        <li>
+          <DisplayedWork />
+        </li>
+      </ul>
+    </SectionWorksDisplay>
   );
 }
