@@ -34,12 +34,12 @@ export default function index() {
               l'intégration de sites web au pixel près.
             </p>
             <RowStyled>
-              <Link href="/archives">
+              <Link href="/work">
                 <a className="home_button">
                   <ion-icon name="globe-outline"></ion-icon> Voir mes projets
                 </a>
               </Link>
-              <Link href="/archives">
+              <Link href="/a-propos">
                 <a className="home_button">
                   <ion-icon name="add-outline"></ion-icon> En savoir plus
                 </a>
