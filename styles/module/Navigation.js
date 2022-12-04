@@ -9,4 +9,19 @@ export const StyledNavigationList = styled.ul`
   gap: 1.5rem;
 `;
 
-export const StyledNavigationItem = styled.li``;
+export const StyledNavigationItem = styled.li`
+  counter-increment: item 1;
+
+  a::before {
+    content: "0" counter(item) ".";
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-right: 10px;
+    opacity: 0.4;
+  }
+
+  a > div {
+    display: inline-block;
+  }
+`;

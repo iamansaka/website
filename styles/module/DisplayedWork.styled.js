@@ -1,67 +1,65 @@
 import styled from "styled-components";
 
-export const CardStyled = styled.article`
+export const WorkItemStyled = styled.div`
+  position: relative;
+  padding: 2.625rem 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: 3.75rem;
-  /* height: 576px; */
-  padding: 1.875rem 0;
-  border-bottom: 1px solid var(--dark);
+  flex-flow: row;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
 `;
 
-export const CardHeaderStyled = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1.5rem;
-`;
-
-export const ColStyled = styled.div`
-  grid-column: ${({ span }) => `${span || "span 1/ span 12"}`};
-  grid-auto-rows: auto;
-  display: flex;
-  flex-direction: column;
-  gap: ${({ gap }) => `${gap || "1rem"}`};
-
-  .works_text {
-    width: 65%;
+export const WorkItemNumStyled = styled.div`
+  margin-right: 30px;
+  font-size: 0.9rem;
+  &::before {
+    content: "( ";
   }
-
-  .works_techno {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 0.24rem;
-
-    li::before {
-      content: "#";
-      margin-right: 3px;
-    }
+  &::after {
+    content: " )";
   }
 `;
 
-export const WorkTitleStyled = styled.h3`
-  font-size: 2.25rem;
-  text-transform: uppercase;
-  font-weight: 200;
-  font-family: "Morganite", -apple-system, "Open Sans", sans-serif;
+export const WorkItemWrapper = styled.div`
+  .title {
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .category {
+    font-size: 1.188rem;
+  }
+  ${WorkItemStyled}:hover & {
+    opacity: 0.6;
+    color: var(--blue);
+  }
 `;
 
-export const WorkThumbnailStyled = styled.div`
-  background-color: red;
-  height: 500px;
-  margin-bottom: 20px;
+export const WorkImageStyled = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  visibility: ${(props) => (props.ishover ? "visible" : "hidden")};
+  opacity: ${(props) => (props.ishover ? "1" : "0")};
+  z-index: 999;
+  &:hover + ${WorkItemWrapper} {
+    filter: blur(8px) opacity(20%);
+    transition: all 0.2s ease;
+  }
 
-  img {
-    max-width: 100%;
+  .item {
+    position: relative;
+    display: block;
+    left: 0px;
+    top: 0px;
+    transform-origin: 50% 50%;
+  }
+
+  .item_image {
+    max-width: 30vw;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top 20% center;
+    height: auto;
     vertical-align: middle;
-    /* transition: all 4s ease;
-    &:hover {
-      object-position: bottom center;
-    } */
+    object-fit: contain;
   }
 `;

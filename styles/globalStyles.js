@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     a {
         color: inherit;
         text-decoration: none;
+        ${"" /* cursor: url("./images/cursor.svg") 14 16, auto; */}
     }
 
 `;

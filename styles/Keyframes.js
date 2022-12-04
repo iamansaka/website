@@ -19,6 +19,17 @@ const Animation = css`
       transform: translateX(0px) translateY(0) scale(1);
     }
   }
+
+  @keyframes animate-rotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(1turn);
+      transform: rotate(1turn);
+    }
+  }
 `;
 
 export default Animation;
