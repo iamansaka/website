@@ -7,21 +7,25 @@ import DisplayedWork from "./DisplayedWork/DisplayedWork";
 // Styled
 import {
   SectionWorksDisplay,
-  TitleWorksStyled,
+  WorksHeaderStyled,
+  ProjectGridStyled,
 } from "../../styles/module/DisplayedWorks.styled";
 
 export default function DisplayedWorks() {
   return (
     <SectionWorksDisplay>
-      <TitleWorksStyled>Découvrez mes derniers projets</TitleWorksStyled>
-      <ul className="work-items">
-        <li>
+      <WorksHeaderStyled>
+        <p>Mes projets récents</p>
+        <h2>Découvrez mes derniers projets sur lesquelles j'ai travaillé</h2>
+      </WorksHeaderStyled>
+      <div className="projets_wrapper">
+        <ProjectGridStyled>
           <DisplayedWork />
-        </li>
-        <li>
           <DisplayedWork />
-        </li>
-      </ul>
+          <DisplayedWork />
+          <DisplayedWork />
+        </ProjectGridStyled>
+      </div>
     </SectionWorksDisplay>
   );
 }

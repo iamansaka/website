@@ -1,65 +1,64 @@
 import styled from "styled-components";
+import { device } from "../device";
 
-export const WorkItemStyled = styled.div`
-  position: relative;
-  padding: 2.625rem 0;
+export const ProjectItemStyled = styled.div`
   display: flex;
-  flex-flow: row;
-  gap: 10px;
-  border-bottom: 1px solid #eee;
-`;
-
-export const WorkItemNumStyled = styled.div`
-  margin-right: 30px;
-  font-size: 0.9rem;
-  &::before {
-    content: "( ";
+  flex-direction: column;
+  width: 100%;
+  padding: 1.3rem;
+  border-radius: 10px;
+  counter-increment: project 1;
+  transition: all 0.2s ease-out;
+  @media ${device.md} {
+    padding: calc(1.3rem / 1.3);
   }
-  &::after {
-    content: " )";
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px 12px rgba(211, 211, 211, 0.7);
+    z-index: 2;
   }
-`;
-
-export const WorkItemWrapper = styled.div`
-  .title {
-    text-transform: uppercase;
-    font-size: 30px;
-  }
-  .category {
-    font-size: 1.188rem;
-  }
-  ${WorkItemStyled}:hover & {
-    opacity: 0.6;
-    color: var(--blue);
-  }
-`;
-
-export const WorkImageStyled = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  visibility: ${(props) => (props.ishover ? "visible" : "hidden")};
-  opacity: ${(props) => (props.ishover ? "1" : "0")};
-  z-index: 999;
-  &:hover + ${WorkItemWrapper} {
-    filter: blur(8px) opacity(20%);
-    transition: all 0.2s ease;
-  }
-
-  .item {
+  &:nth-child(2n) {
     position: relative;
-    display: block;
-    left: 0px;
-    top: 0px;
-    transform-origin: 50% 50%;
+    top: -110px;
+    @media ${device.md} {
+      top: 0;
+    }
   }
 
-  .item_image {
-    max-width: 30vw;
+  > * {
+    margin-bottom: 13px;
+  }
+
+  .category {
+    font-size: 0.96rem;
+    margin-bottom: 5px !important;
+
+    &::before {
+      content: "0" counter(project) " - ";
+      display: inline-block;
+    }
+  }
+
+  h3 {
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-underline-offset: 8px;
+  }
+
+  p {
+    width: calc(100% / 1.7);
+  }
+
+  img {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    height: auto;
-    vertical-align: middle;
-    object-fit: contain;
+    height: 650px;
+    z-index: 1;
+    border-radius: 5px;
+    @media ${device.md} {
+      height: 100%;
+    }
   }
 `;
