@@ -6,4 +6,10 @@ const StyledContainer = styled.div`
   padding: 0 8.8541666667vw;
 `;
 
+export const ContainerSmallStyled = styled.div`
+  max-width: 740px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+`
 export default StyledContainer;

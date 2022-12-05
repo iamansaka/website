@@ -1,34 +1,41 @@
 import styled from "styled-components";
 
-export const StyledButton = styled.a`
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 8px;
-
-  cursor: pointer;
-
-  span {
+export const StyledButton = styled.div`
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  img {
+    height: 20px;
+    transition: all 200ms ease;
+  }
+  .button_link {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    width: 30px;
-    height: 30px;
-
-    background-color: var(--blue);
-    border-radius: 100%;
-
-    > svg {
-      width: 15px;
+    min-height: 50px;
+    max-width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 200ms ease;
+    &:hover .button_outline {
+      width: calc(100% + 30px);
+    }
+    &:hover img {
+      transform: translateX(10px);
     }
   }
-
-  &:hover svg {
-    animation-name: bounce;
-    animation-duration: 1.4s;
-    animation-delay: 0.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  .button_outline {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    border: 1px solid rgba(0, 0, 0, .22);
+    border-radius: 50px;
+    transition: all 200ms ease;
+  }
+  .button_text {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 20px;
   }
 `;
