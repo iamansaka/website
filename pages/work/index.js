@@ -1,12 +1,19 @@
 // Librairie
-import React from "react";
+import React, { useState } from "react";
+import { findAll } from "../../services/ProjectsApi";
+
+// Component
 import Card from "../../components/Card/Card";
 
 // Styled
 import StyledContainer from "../../styles/base/Container.styled";
 import { SectionProjetsStyled, GridListStyled } from "../../styles/pages/Projet.styled";
 
-export default function Projets() {
+export default function Projets({ projets }) {
+  let projetsList = projets.data.map((projet) => (
+    <Card key={projet.id} {...projet.attributes} />
+  ));
+
   return (
     <StyledContainer>
       <SectionProjetsStyled>
@@ -16,14 +23,18 @@ export default function Projets() {
           augue libero venenatis ornare enim congue lorem habitasse mi si letius eu
           facilisi vivamus facilisis ad vehicula ridiculus odio dui
         </p>
-        <GridListStyled>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </GridListStyled>
+        <GridListStyled>{projetsList}</GridListStyled>
       </SectionProjetsStyled>
     </StyledContainer>
   );
+}
+
+export async function getServerSideProps() {
+  const projets = await findAll();
+
+  return {
+    props: {
+      projets: projets,
+    },
+  };
 }
