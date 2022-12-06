@@ -11,8 +11,8 @@ export const HeroStyled = styled.section`
   grid-gap: 1.5rem;
   grid-template-rows: 2fr 1fr;
   width: 100%;
-
-  @media ${device.sm} {
+  
+  @media ${device.md} {
     margin-top: calc(6.25rem / 2);
     grid-column-gap: 10px;
     grid-row-gap: 20px;
@@ -69,7 +69,7 @@ export const IntroBlockStyled = styled.div`
   font-size: 1.25em;
   grid-column: 6 / span 4;
 
-  @media ${device.sm} {
+  @media ${device.md} {
     grid-column: auto/span 12;
   }
 `;

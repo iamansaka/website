@@ -6,8 +6,8 @@ export const TitleStyled = styled.h1`
   font-size: 11rem;
   line-height: 1;
   text-transform: uppercase;
-  /* -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px; */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
   margin-top: 100px;
   color: var(--dark);
   @media ${device.md} {
@@ -72,6 +72,10 @@ export const CodepenStyled = styled.div`
 
   p {
     margin: 15px 0;
+    width: 30%;
+    @media ${device.md} {
+      width: 100%;
+    }
   }
 
   .link_codepen {
@@ -79,8 +83,66 @@ export const CodepenStyled = styled.div`
   }
 `;
 
+export const CodepenWrapperStyled = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  position: relative;
+`
+
+export const CodepenListStyled = styled.div`
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+`
+
+export const CodepenItemStyled = styled.a`
+  width: 100%;
+  display: grid;
+  position: relative;
+  display: inline-block;
+  
+  > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 28px 1fr 28px;
+    grid-gap: 8px;
+    padding: 2em 0;
+    border-bottom: 1px solid #C7C7C7;
+    align-items: center;
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+    span {
+      display: flex;
+      justify-self: flex-end;
+      opacity: .6;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+`
+
 export const ContactStyled = styled.a`
+  display: inline-block;
   font-family: "RightGrotesk", sans-serif;
   text-transform: uppercase;
   font-size: 77px;
+  margin-bottom: 30px;
+  @media ${device.lg} {
+    font-size: 40px;
+  }
+  @media ${device.md} {
+    font-size: 30px;
+  }
+  @media ${device.sm} {
+    font-size: 20px;
+  }
 `;
