@@ -90,27 +90,31 @@ export const CodepenWrapperStyled = styled.div`
   justify-content: flex-end;
   justify-self: flex-end;
   position: relative;
-`
+`;
 
 export const CodepenListStyled = styled.div`
   width: 50%;
   margin-top: 50px;
   margin-bottom: 100px;
-`
+  @media ${device.lg} {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+`;
 
 export const CodepenItemStyled = styled.a`
   width: 100%;
   display: grid;
   position: relative;
   display: inline-block;
-  
+
   > div {
     position: relative;
     display: grid;
     grid-template-columns: 28px 1fr 28px;
     grid-gap: 8px;
     padding: 2em 0;
-    border-bottom: 1px solid #C7C7C7;
+    border-bottom: 1px solid #c7c7c7;
     align-items: center;
     &:not(:last-child) {
       border-bottom: none;
@@ -118,7 +122,7 @@ export const CodepenItemStyled = styled.a`
     span {
       display: flex;
       justify-self: flex-end;
-      opacity: .6;
+      opacity: 0.6;
     }
     p {
       font-size: 1.3rem;
@@ -128,7 +132,7 @@ export const CodepenItemStyled = styled.a`
       height: 20px;
     }
   }
-`
+`;
 
 export const ContactStyled = styled.a`
   display: inline-block;

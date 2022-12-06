@@ -36,7 +36,9 @@ export default function About() {
           </p>
           <strong>Ce que je sais faire</strong>
           <SkillStyled>
-            {skills.map((skill, index) => (<li key={index}>{skill}</li>))}
+            {skills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
           </SkillStyled>
         </IntroStyled>
         <CodepenStyled>
@@ -50,25 +52,23 @@ export default function About() {
           </p>
           <CodepenWrapperStyled>
             <CodepenListStyled>
-              {
-                codepen.map((item, index) => (
-                  <Link href={item.url} passHref legacyBehavior>
-                    <CodepenItemStyled>
-                      <div>
-                        <span>0{index}</span>
-                        <p>{item.title}</p>
-                        <Arrow />
-                      </div>
-                    </CodepenItemStyled>
-                  </Link>
-                ))
-              }
+              {codepen.map((item, index) => (
+                <Link href={item.url} passHref legacyBehavior>
+                  <CodepenItemStyled>
+                    <div>
+                      <span>0{index + 1}</span>
+                      <p>{item.title}</p>
+                      <Arrow />
+                    </div>
+                  </CodepenItemStyled>
+                </Link>
+              ))}
             </CodepenListStyled>
           </CodepenWrapperStyled>
         </CodepenStyled>
-        <Link href={navLinks[3].url} passHref legacyBehavior>
+        {/* <Link href={navLinks[3].url} passHref legacyBehavior>
           <ContactStyled>Une collaboration ? Un projet ?</ContactStyled>
-        </Link>
+        </Link> */}
       </StyledContainer>
     </>
   );
