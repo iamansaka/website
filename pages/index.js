@@ -13,6 +13,7 @@ import {
   HeroStyled,
   IntroBlockStyled,
   RowStyled,
+  SectionContactStyled
 } from "../styles/pages/Home.styled";
 
 export default function index() {

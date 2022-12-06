@@ -1,7 +1,7 @@
 // Librairie
 import React from "react";
 import Link from "next/link";
-import { navLinks } from "../lib/config";
+import { navLinks, skills, codepen } from "../lib/config";
 
 // Styled
 import StyledContainer from "../styles/base/Container.styled";
@@ -11,8 +11,12 @@ import {
   TitleSecondaryStyled,
   SkillStyled,
   CodepenStyled,
+  CodepenWrapperStyled,
+  CodepenListStyled,
+  CodepenItemStyled,
   ContactStyled,
 } from "../styles/pages/A-propos.styled";
+import Arrow from "../components/Svg/Arrow";
 
 export default function About() {
   return (
@@ -32,13 +36,7 @@ export default function About() {
           </p>
           <strong>Ce que je sais faire</strong>
           <SkillStyled>
-            <li>JavaScript (ES6+)</li>
-            <li>React</li>
-            <li>Bootstrap</li>
-            <li>PHP</li>
-            <li>Symfony</li>
-            <li>MySQL</li>
-            <li>GIT</li>
+            {skills.map((skill, index) => (<li key={index}>{skill}</li>))}
           </SkillStyled>
         </IntroStyled>
         <CodepenStyled>
@@ -50,6 +48,23 @@ export default function About() {
               Codepen.
             </a>
           </p>
+          <CodepenWrapperStyled>
+            <CodepenListStyled>
+              {
+                codepen.map((item, index) => (
+                  <Link href={item.url} passHref legacyBehavior>
+                    <CodepenItemStyled>
+                      <div>
+                        <span>0{index}</span>
+                        <p>{item.title}</p>
+                        <Arrow />
+                      </div>
+                    </CodepenItemStyled>
+                  </Link>
+                ))
+              }
+            </CodepenListStyled>
+          </CodepenWrapperStyled>
         </CodepenStyled>
         <Link href={navLinks[3].url} passHref legacyBehavior>
           <ContactStyled>Une collaboration ? Un projet ?</ContactStyled>

@@ -23,6 +23,6 @@ export const ProjectGridStyled = styled.div`
 
   @media ${device.md} {
     grid-template-columns: 1fr;
-    grid-row-gap: calc(100px / 2);
+    grid-row-gap: 10px;
   }
 `;
