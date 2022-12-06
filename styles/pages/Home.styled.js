@@ -11,7 +11,7 @@ export const HeroStyled = styled.section`
   grid-gap: 1.5rem;
   grid-template-rows: 2fr 1fr;
   width: 100%;
-  
+
   @media ${device.md} {
     margin-top: calc(6.25rem / 2);
     grid-column-gap: 10px;
@@ -28,7 +28,7 @@ export const HeadingTitleStyled = styled.h1`
   grid-column-end: span 12;
 
   font-family: "RightGrotesk", sans-serif;
-  font-size: 17vw;
+  font-size: 13.5vw;
   /* font-size: 10rem; */
   line-height: 0.7;
   text-transform: uppercase;
@@ -67,7 +67,7 @@ export const IntroBlockStyled = styled.div`
   flex-direction: column;
   gap: 20px;
   font-size: 1.25em;
-  grid-column: 6 / span 4;
+  grid-column: 7 / span 5;
 
   @media ${device.md} {
     grid-column: auto/span 12;

@@ -2,23 +2,46 @@
 import React from "react";
 import Link from "next/link";
 
-import {ProjectItemStyled} from "../../../styles/module/DisplayedWork.styled";
+// Styled
+import {
+  ProjectItemStyled,
+  ProjectThumbnailStyled,
+  ProjectContentStyled,
+  ProjectBodyStyled,
+  ProjectLinkStyled,
+} from "../../../styles/module/DisplayedWork.styled";
 
 function DisplayedWork() {
   return (
-      <div>
-          <Link href="/work/4ppc">
-              <ProjectItemStyled>
-                  <div className="category">Développement</div>
-                  <h3>4 Pattes des poils et 1 coeur</h3>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
-                      luctus venenatis, lectus magna fringilla urna, porttitor.
-                  </p>
-                  <img src="./images/4ppc.png"/>
-              </ProjectItemStyled>
+    <ProjectItemStyled>
+      <ProjectThumbnailStyled>
+        <Link href="/">
+          <a>
+            <div className="thumbnail_img">
+              <img src="./images/4ppc.png" />
+            </div>
+          </a>
+        </Link>
+      </ProjectThumbnailStyled>
+      <ProjectBodyStyled>
+        <ProjectContentStyled>
+          <div className="category">Développement web</div>
+          <Link href="/">
+            <a>
+              <h3>4 Pattes des poils et 1 coeur</h3>
+            </a>
           </Link>
-      </div>
+          <p>
+            Lorem ipsum dolor sit amet sociosqu mauris quam suspendisse mollis rhoncus
+            facilisis ridiculus letius himenaeos maecenas eget lacus aptent nisi
+          </p>
+          <div className="technologie">Symfony, Html/css, JavaScript</div>
+        </ProjectContentStyled>
+        <Link href="" passHref legacyBehavior>
+          <ProjectLinkStyled>Voir le projet ↗</ProjectLinkStyled>
+        </Link>
+      </ProjectBodyStyled>
+    </ProjectItemStyled>
   );
 }
 

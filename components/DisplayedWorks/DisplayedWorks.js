@@ -19,12 +19,9 @@ export default function DisplayedWorks() {
         <h2>Découvrez mes derniers projets sur lesquelles j'ai travaillé</h2>
       </WorksHeaderStyled>
       <div className="projets_wrapper">
-        <ProjectGridStyled>
-          <DisplayedWork />
-          <DisplayedWork />
-          <DisplayedWork />
-          <DisplayedWork />
-        </ProjectGridStyled>
+        <DisplayedWork />
+        <DisplayedWork />
+        <DisplayedWork />
       </div>
     </SectionWorksDisplay>
   );

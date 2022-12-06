@@ -1,68 +1,79 @@
 import styled from "styled-components";
 import { device } from "../device";
 
-export const ProjectItemStyled = styled.a`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 1.3rem;
-  border-radius: 10px;
-  cursor: pointer;
+export const ProjectItemStyled = styled.div`
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 32px;
   counter-increment: project 1;
-  transition: all 0.2s ease-out;
+  padding: 3rem 0;
+  border-bottom: 1px solid #b9b6b6;
   @media ${device.md} {
-    padding: calc(1.3rem / 1.3);
+    grid-template-columns: 1fr;
   }
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 40px 12px rgba(211, 211, 211, 0.7);
-    z-index: 2;
+`;
+
+export const ProjectThumbnailStyled = styled.div`
+  position: relative;
+  max-width: 600px;
+  width: 55vw;
+  @media ${device.md} {
+    width: 100%;
   }
-  &:nth-child(2n) {
-    position: relative;
-    top: -110px;
-    @media ${device.md} {
-      top: 0;
+
+  .thumbnail_img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: contain;
     }
   }
+`;
 
-  > * {
-    margin-bottom: 13px;
+export const ProjectContentStyled = styled.div`
+  h3 {
+    font-family: "RightGrotesk", sans-serif;
+    text-transform: uppercase;
+    color: #101118;
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
-
+  p {
+    width: 70%;
+  }
   .category {
-    font-size: 0.96rem;
-    margin-bottom: 5px !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 
     &::before {
       content: "0" counter(project) " - ";
       display: inline-block;
+      margin-right: 3px;
     }
   }
 
-  h3 {
-    font-weight: bold;
-    text-decoration: underline;
-    text-transform: uppercase;
-    text-underline-offset: 8px;
+  .technologie {
+    font-size: 0.85;
+    opacity: 0.7;
+    margin: 0.8rem 0;
   }
+`;
 
-  p {
-    width: calc(100% / 1.7);
-    @media ${device.md} {
-      width: 100%
-    }
-  }
+export const ProjectLinkStyled = styled.a`
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  cursor: pointer;
+`;
 
-  img {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 480px;
-    z-index: 1;
-    border-radius: 5px;
-    @media ${device.md} {
-      height: 100%;
-    }
-  }
+export const ProjectBodyStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
