@@ -10,3 +10,7 @@ const instance = axios.create({
 export async function findAll() {
   return await instance.get("/projets?populate=*").then((response) => response.data);
 }
+
+export async function findOne(slug) {
+  return await instance.get(`/projets/${slug}`).then((response) => response.data);
+}
