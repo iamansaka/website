@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../device";
 
 export const StyledNavigation = styled.nav`
-  @media ${device.sm} {
+  @media ${device.md} {
     width: 100%;
     display: block;
     margin-top: 25px;
@@ -14,7 +14,7 @@ export const StyledNavigationList = styled.ul`
   flex-wrap: wrap;
   pointer-events: all;
   gap: 1.5rem;
-  @media ${device.sm} {
+  @media ${device.md} {
     flex-direction: column;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../device";
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -11,15 +12,22 @@ export const StyledHeader = styled.header`
   /* padding-inline: 8.8541666667vw; */
   padding-inline: 17.8541666667vw;
   border-bottom: 1px solid var(--dark);
+  @media ${device.md} {
+    padding-inline: 8.8541666667vw;
+  }
 `;
 
 export const ButtonBurgerStyled = styled.button`
+  display: none;
   position: relative;
   width: 2rem;
   height: 2rem;
   background: transparent;
   cursor: pointer;
   z-index: 90;
+  @media ${device.md} {
+    display: block;
+  }
 
   span {
     position: absolute;

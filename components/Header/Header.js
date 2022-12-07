@@ -18,6 +18,10 @@ export default function Header() {
   };
 
   useEffect(() => {
+    setLargeurEcran(window.innerWidth);
+  });
+
+  useEffect(() => {
     const innerWidth = () => {
       if (window !== "undefined") {
         setLargeurEcran(window.innerWidth);
@@ -42,6 +46,7 @@ export default function Header() {
         <span></span>
       </ButtonBurgerStyled>
       {(menuToggle || largeurEcran > 768) && <Navigation />}
+      {/* {(menuToggle || largeurEcran > 768) && <Navigation />} */}
     </StyledHeader>
   );
 }
